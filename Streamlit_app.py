@@ -111,7 +111,7 @@ def main():
     #tc min - 7800
     #tc = 8400000
     result=""
-    if st.button("Predict",use_container_width=True):
+    if st.button("Predict"):
         tem = temp(year)
         do = dox(year)
         ph = pH(year)
