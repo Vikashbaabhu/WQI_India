@@ -25,9 +25,6 @@ c7 =pickle.load(p7)
 p8 = open("tot.pkl","rb")
 c8 =pickle.load(p8)
 
-with open('style.css') as f :
-      st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-
 def welcome():
     return "Welcome All"
 
@@ -91,7 +88,8 @@ def main():
     </div>
     <br></br>
     """
-
+    with open('style.css') as f :
+      st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
     st.markdown(html_temp,unsafe_allow_html=True)
     year = st.number_input("Year",step=1,min_value=2023)
     #temp min - 24
