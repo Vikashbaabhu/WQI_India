@@ -91,7 +91,7 @@ def main():
     <br></br>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    with open('static/.style.css','r') as f :
+    with open('static/style.css','r') as f :
       st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)    
     year = st.number_input("Year",step=1,min_value=2023)
     #temp min - 24
