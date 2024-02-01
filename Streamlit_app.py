@@ -90,12 +90,7 @@ def main():
     <h2 style="color:white;text-align:center;font-family:Callibri;"><b>Indian River Water Quality Analysis</b></h2>
     
     </div>
-    <br></br>
-    """
-    st.markdown(html_temp,unsafe_allow_html=True)
-    st.markdown(
-        """ 
-        <style>
+    <style>
         .st-emotion-cache-kskxxl.e116k4er3 {
             border-color:white;
         }
@@ -162,7 +157,9 @@ def main():
             color:white;
         }
         </style>
-        """,unsafe_allow_html=True)
+    <br></br>
+    """
+    st.markdown(html_temp,unsafe_allow_html=True)
     year = st.number_input("Year",step=1,min_value=2023)
     #temp min - 24
     #temp = 30
