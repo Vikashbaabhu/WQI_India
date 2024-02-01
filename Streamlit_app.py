@@ -25,8 +25,7 @@ c7 =pickle.load(p7)
 p8 = open("tot.pkl","rb")
 c8 =pickle.load(p8)
 
-with open('style.css') as f :
-      st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 
 def welcome():
     return "Welcome All"
@@ -88,78 +87,12 @@ def main():
     html_temp = """
     <div style="background-color:skyblue;padding:10px;border-radius:5px">
     <h2 style="color:white;text-align:center;font-family:Callibri;"><b>Indian River Water Quality Analysis</b></h2>
-    
     </div>
-    <style>
-        .st-emotion-cache-kskxxl.e116k4er3 {
-            border-color:white;
-        }
-        div.st-emotion-cache-zt5igj.e1nzilvr4 {
-            color:rgb(37, 2, 78);
-        }
-        div.element-container.st-emotion-cache-13tdgzb.e1f1d6gn4 {
-            height:70px;
-        }
-
-        div.st-emotion-cache-16idsys.e1nzilvr5 p{
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        div.st-emotion-cache-16idsys.e1nzilvr5 {
-            width: 100%;
-            text-align: center;
-        }l
-
-        div.stMarkdown {
-            vertical-align: bottom;
-        }
-
-        div.st-emotion-cache-5rimss.e1nzilvr5 {
-            align-items: center;
-        }
-
-        div.st-emotion-cache-5rimss.e1nzilvr5 p{
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        div.st-af.st-ah.st-ba.st-ar.st-as.st-ax.st-ay.st-az.st-b0.st-b1.st-b2.st-bb.st-b7 {
-            height:40px;
-            width:224px;
-            border-color:white;
-            text-align: center;
-        }
-
-        button.st-emotion-cache-7ym5gk.ef3psqc12 {
-            width: 100%;
-        }
-
-        div.st-emotion-cache-1vbkxwb.e1nzilvr5 p{
-            font-size: large;
-        }
-
-        div.st-emotion-cache-1vbkxwb.e1nzilvr5 p:hover{
-            font-weight: bold;
-        }
-
-        button.step-down.st-emotion-cache-zbmw0q.e116k4er1:hover {
-            background-color:darkslateblue ;
-        }
-
-        button.step-up.st-emotion-cache-zbmw0q.e116k4er1:hover {
-            background-color:darkslateblue ;
-        }
-
-        button.st-emotion-cache-1umgz6k.ef3psqc12:hover {
-            border-color: lightblue;
-            background-color:skyblue;
-            color:white;
-        }
-        </style>
     <br></br>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
+    with open('static/.style.css','r') as f :
+      st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)    
     year = st.number_input("Year",step=1,min_value=2023)
     #temp min - 24
     #temp = 30
